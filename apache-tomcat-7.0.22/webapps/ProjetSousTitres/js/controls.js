@@ -6,6 +6,7 @@ function onReady_controls() {
 
     // Sliders
     var seekBar = document.getElementById("seek-bar");
+	seekBar.step = 0.01;
     var volumeBar = document.getElementById("volume-bar");
     var badgeVideo = document.getElementById("badge-video");
 
@@ -18,13 +19,12 @@ function onReady_controls() {
         video.currentTime = time;
     });
 
-
     // Update the seek bar as the video plays
     video.addEventListener("timeupdate", function () {
         // Calculate the slider value
         var value = (100 / video.duration) * video.currentTime;
         badgeVideo.innerHTML = secondesToHMS(video.currentTime);
-
+		
         // Update the slider value
         seekBar.value = value;
     });
