@@ -1,0 +1,58 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.video-back {
+    background-color: #000000;
+}
+
+textarea {
+    resize: none;
+    min-width: 300px;
+}
+
+#in_StartTime, #in_StopTime{
+    width: 120px;
+}
+#in_DurationTime {
+    width: 150px;
+}
+
+#volume-bar {
+    width: 200px !important;
+}
+
+#seek-bar {
+    margin-bottom: 10px;
+}
+
+#subtitle-panel-footer {
+    height: 84px;
+}
+
+input[type=range]::-moz-range-track {
+    height: 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #f0ad4e;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #337ab7;
+}

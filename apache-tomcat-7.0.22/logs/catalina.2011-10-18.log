@@ -1,0 +1,14 @@
+18 oct. 2011 17:56:48 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+18 oct. 2011 17:56:49 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+18 oct. 2011 17:56:50 org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+18 oct. 2011 17:56:50 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+18 oct. 2011 17:56:50 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+18 oct. 2011 17:56:50 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+18 oct. 2011 17:56:50 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]

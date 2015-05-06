@@ -1,0 +1,48 @@
+26 mars 2012 14:41:17 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+26 mars 2012 14:41:18 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+26 mars 2012 14:41:18 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+26 mars 2012 14:41:18 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1810 ms
+26 mars 2012 14:41:18 org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+26 mars 2012 14:41:18 org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.22
+26 mars 2012 14:41:18 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire docs de l'application web
+26 mars 2012 14:41:21 org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2 252] milliseconds.
+26 mars 2012 14:41:21 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire ROOT de l'application web
+26 mars 2012 14:41:21 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire dev de l'application web
+26 mars 2012 14:41:21 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire examples de l'application web
+26 mars 2012 14:41:21 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire host-manager de l'application web
+26 mars 2012 14:41:22 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TP de l'application web
+26 mars 2012 14:41:22 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire manager de l'application web
+26 mars 2012 14:41:22 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+26 mars 2012 14:41:22 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+26 mars 2012 14:41:22 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3952 ms
+26 mars 2012 18:33:55 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+26 mars 2012 18:33:57 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+26 mars 2012 18:33:58 org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+26 mars 2012 18:33:58 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+26 mars 2012 18:33:58 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+26 mars 2012 18:33:58 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+26 mars 2012 18:33:58 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]

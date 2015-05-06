@@ -1,0 +1,166 @@
+9 avr. 2013 04:00:48 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib
+9 avr. 2013 04:00:49 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 04:00:49 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 04:00:49 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1989 ms
+9 avr. 2013 04:00:49 org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+9 avr. 2013 04:00:49 org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.22
+9 avr. 2013 04:00:49 org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive ProjetSousTitres.war de l'application web
+9 avr. 2013 04:00:50 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire docs de l'application web
+9 avr. 2013 04:00:50 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire ROOT de l'application web
+9 avr. 2013 04:00:50 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire dev de l'application web
+9 avr. 2013 04:00:50 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire examples de l'application web
+9 avr. 2013 04:00:50 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire host-manager de l'application web
+9 avr. 2013 04:00:51 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TP de l'application web
+9 avr. 2013 04:00:51 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire manager de l'application web
+9 avr. 2013 04:00:51 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TestSub de l'application web
+9 avr. 2013 04:00:51 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire SubMaker de l'application web
+9 avr. 2013 04:00:51 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire Gabriel de l'application web
+9 avr. 2013 04:00:51 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 04:00:51 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 04:00:51 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1649 ms
+9 avr. 2013 04:03:00 org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+9 avr. 2013 04:03:00 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 04:03:01 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 04:03:02 org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+9 avr. 2013 04:03:03 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 04:03:03 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 04:03:03 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 04:03:03 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 05:40:12 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib
+9 avr. 2013 05:40:13 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 05:40:13 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 05:40:13 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 530 ms
+9 avr. 2013 05:40:13 org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+9 avr. 2013 05:40:13 org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.22
+9 avr. 2013 05:40:13 org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive ProjetSousTitres.war de l'application web
+9 avr. 2013 05:40:13 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire docs de l'application web
+9 avr. 2013 05:40:13 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire ROOT de l'application web
+9 avr. 2013 05:40:13 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire dev de l'application web
+9 avr. 2013 05:40:13 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire examples de l'application web
+9 avr. 2013 05:40:13 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire host-manager de l'application web
+9 avr. 2013 05:40:13 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TP de l'application web
+9 avr. 2013 05:40:13 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire manager de l'application web
+9 avr. 2013 05:40:14 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TestSub de l'application web
+9 avr. 2013 05:40:14 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire SubMaker de l'application web
+9 avr. 2013 05:40:14 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire Gabriel de l'application web
+9 avr. 2013 05:40:14 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 05:40:14 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 05:40:14 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1005 ms
+9 avr. 2013 05:52:22 org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+9 avr. 2013 05:52:22 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 05:52:23 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 05:52:24 org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+9 avr. 2013 05:52:24 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 05:52:24 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 05:52:24 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 05:52:24 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 08:38:34 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib
+9 avr. 2013 08:38:35 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 08:38:35 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 08:38:35 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 683 ms
+9 avr. 2013 08:38:35 org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+9 avr. 2013 08:38:35 org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.22
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployWAR
+INFO: Déploiement de l'archive ProjetSousTitres.war de l'application web
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire docs de l'application web
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire ROOT de l'application web
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire dev de l'application web
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire examples de l'application web
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire host-manager de l'application web
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TP de l'application web
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire manager de l'application web
+9 avr. 2013 08:38:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TestSub de l'application web
+9 avr. 2013 08:38:36 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire SubMaker de l'application web
+9 avr. 2013 08:38:36 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire Gabriel de l'application web
+9 avr. 2013 08:38:36 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 08:38:36 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 08:38:36 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1052 ms
+9 avr. 2013 11:55:21 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 11:55:22 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 11:55:23 org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+9 avr. 2013 11:55:23 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 11:55:23 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+9 avr. 2013 11:55:23 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+9 avr. 2013 11:55:23 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]

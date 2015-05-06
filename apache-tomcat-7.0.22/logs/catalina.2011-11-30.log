@@ -1,0 +1,98 @@
+30 nov. 2011 03:32:58 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+30 nov. 2011 03:32:59 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 03:33:00 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 03:33:00 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1752 ms
+30 nov. 2011 03:33:00 org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+30 nov. 2011 03:33:00 org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.22
+30 nov. 2011 03:33:00 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire docs de l'application web
+30 nov. 2011 03:33:06 org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [6 453] milliseconds.
+30 nov. 2011 03:33:07 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire ROOT de l'application web
+30 nov. 2011 03:33:07 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire dev de l'application web
+30 nov. 2011 03:33:07 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire examples de l'application web
+30 nov. 2011 03:33:07 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire host-manager de l'application web
+30 nov. 2011 03:33:07 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TP de l'application web
+30 nov. 2011 03:33:07 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire manager de l'application web
+30 nov. 2011 03:33:07 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 03:33:07 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 03:33:07 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 7778 ms
+30 nov. 2011 03:40:41 org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+30 nov. 2011 03:40:41 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 03:40:42 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 03:40:43 org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+30 nov. 2011 03:40:43 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 03:40:43 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 03:40:43 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 03:40:43 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 03:40:48 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+30 nov. 2011 03:40:48 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 03:40:48 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 03:40:48 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 627 ms
+30 nov. 2011 03:40:48 org.apache.catalina.core.StandardService startInternal
+INFO: Démarrage du service Catalina
+30 nov. 2011 03:40:48 org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.22
+30 nov. 2011 03:40:48 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire docs de l'application web
+30 nov. 2011 03:40:53 org.apache.catalina.util.SessionIdGenerator createSecureRandom
+INFO: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [4 116] milliseconds.
+30 nov. 2011 03:40:53 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire ROOT de l'application web
+30 nov. 2011 03:40:53 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire dev de l'application web
+30 nov. 2011 03:40:53 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire examples de l'application web
+30 nov. 2011 03:40:53 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire host-manager de l'application web
+30 nov. 2011 03:40:53 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire TP de l'application web
+30 nov. 2011 03:40:54 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Déploiement du répertoire manager de l'application web
+30 nov. 2011 03:40:54 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 03:40:54 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 03:40:54 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 5163 ms
+30 nov. 2011 23:49:28 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 23:49:29 org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 23:49:30 org.apache.catalina.core.StandardService stopInternal
+INFO: Arrêt du service Catalina
+30 nov. 2011 23:49:30 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 23:49:30 org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+30 nov. 2011 23:49:30 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+30 nov. 2011 23:49:30 org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]

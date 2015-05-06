@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Éditeur de Sous-Titres</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- <CSS> -->
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- hopscotch.css (help guide) -->
+    <link href="lib/hopscotch-0.2.2/css/hopscotch.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="lib/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Animate.css (animations) -->
+    <link href="lib/animate.css" rel="stylesheet">
+    <!-- CSS Main -->
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="aide_1" class="navbar-brand" href="#">Editeur de sous-titres vidéo (.srt)</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left">
+                <a id="bt_help" class="btn btn-default">
+                    <i class="fa fa-life-ring"></i> Aide / Présentation
+                </a>
+            </form>
+            <ul class="nav navbar-nav">
+                <li id="li_fullscreen">
+                    <a id="a_fullscreen" href="#"><i id="ico_fullscreen"
+                                                     class="glyphicon glyphicon-fullscreen"></i> <span
+                            id="txt_fullscreen">Lancer plein écran</span></a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Par Alexandre FOURES & François HECTOR</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- Sélection d'une vidéo -->
+<div id="import-div" class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <h1>Editeur de sous-titre</h1>
+
+                <p>Pour commencer, veuillez ouvrir une vidéo (ex .ogg ou .webm)</p>
+                <input type="file" id="fileElem" accept="video/*" style="display:none"
+                       onchange="handleFiles(this.files)">
+
+                <p id="aide_2"><a id="fileSelect" class="btn btn-primary btn-lg" href="#" role="button"><i
+                        class="fa fa-file-video-o"></i> Sélectionnez une vidéo</a></p>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
+
+<!-- Affichage de la vidéo et édition des sous-titre -->
+<div hidden id="interface-div" class="container-fluid">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="aide_3" class="panel panel-primary">
+                        <!-- Affiche du titre et de la durée -->
+                        <div class="panel-heading" id="video-panel-heading">
+                            <h3 class="panel-title"><i class="glyphicon glyphicon-facetime-video"></i> Titre : <span
+                                    id="title-video">...</span> <span
+                                    class="badge pull-right"><span id="badge-video"></span> / <span
+                                    id="badge-duration"></span></span></h3>
+                        </div>
+                        <!-- Affichage de la vidéo et du canvas -->
+                        <div id="video-div" class="panel-body nopadding video-back scrollable">
+                            <canvas id="cvideo" style="position: absolute; bottom: 0; left: 0; right: 0;"></canvas>
+                            <video id="video" width="100%" height="100%"/>
+                        </div>
+                        <!-- Commandes de la vidéo -->
+                        <div id="aide_4" class="panel-footer">
+                            <input type="range" id="seek-bar" value="0">
+
+                            <div class="btn-toolbar" role="toolbar" aria-label="...">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button id="bt_step_start" type="button"
+                                            class="btn btn-default disabled-on-record disabled-on-repeat">
+                                        <span class="glyphicon glyphicon-arrow-up"></span></button>
+                                    <button id="bt_back" type="button" class="btn btn-default disabled-on-repeat"><span
+                                            class="glyphicon glyphicon-backward"></span></button>
+                                </div>
+                                <div id="aide_5" class="btn-group" role="group" aria-label="...">
+                                    <button id="bt_play_pause" type="button"
+                                            class="btn btn-primary disabled-on-record disabled-on-repeat">
+                                        <span id="ico_play_pause" class="glyphicon glyphicon-play"></span>
+                                    </button>
+                                    <button id="bt_record" type="button" class="btn btn-warning disabled-on-repeat">
+                                        <span id="ico_record" class="fa fa-circle"></span><span id="txt_record"
+                                                                                                class="text-hide"> Synchronisation démarrée</span>
+                                    </button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button id="bt_forw" type="button" class="btn btn-default disabled-on-repeat"><span
+                                            class="glyphicon glyphicon-forward"></span></button>
+                                    <button id="bt_step_stop" type="button"
+                                            class="btn btn-default disabled-on-record disabled-on-repeat">
+                                        <span class="glyphicon glyphicon-arrow-down"></span></button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="...">
+
+                                </div>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button id="bt_keep_repeat" type="button"
+                                            class="btn btn-default duration-test disabled-on-record">
+                                        <span id="ico_keep_repeat" class="fa fa-refresh"></span> Jouer en boucle
+                                    </button>
+                                </div>
+                                <form class="form-inline pull-right" role="form">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <i class="input-group-addon glyphicon glyphicon-volume-down"></i><input
+                                                class="form-control" type="range" id="volume-bar" min="0" max="1"
+                                                step="0.1" value="1"><i
+                                                class="input-group-addon glyphicon glyphicon-volume-up"></i>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div id="add-panel" class="panel panel-success">
+                        <!-- Edition des sous-titre, saisie des dates -->
+                        <div id="aide_6" class="panel-heading">
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <div id="Recording-StartTime" class="input-group has-success">
+                                        <div class="input-group-addon">D</div>
+                                        <input id="in_StartTime" type="text" class="form-control scrollable"
+                                               placeholder="StartTime">
+                                    </div>
+                                </div>
+                                <div id="aide_9" class="form-group">
+                                    <div id="Recording-StopTime" class="input-group has-success">
+                                        <div class="input-group-addon">F</div>
+                                        <input id="in_StopTime" type="text" class="form-control scrollable"
+                                               placeholder="StopTime">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div id="DurationTime" class="input-group has-feedback has-success">
+                                        <div class="input-group-addon">Durée</div>
+                                        <input id="in_DurationTime" type="text" class="form-control"
+                                               placeholder="Durée" readonly>
+                                        <span id="ico_DurationTime"
+                                              class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                    </div>
+                                </div>
+                                <div id="aide_10" class="form-group pull-right">
+                                    <button id="bt_add_before" type="button" class="btn btn-default"><span
+                                            class="glyphicon glyphicon-chevron-left"></span>
+                                    </button>
+
+                                    <button id="bt_add_after" type="button" class="btn btn-default"><span
+                                            class="glyphicon glyphicon-chevron-right"></span>
+                                    </button>
+                                    <button id="bt_save" type="button" class="btn btn-success duration-test">
+                                        <span class="fa fa-floppy-o"></span> Ajouter
+                                    </button>
+                                </div>
+                                <div class="form-group pull-right">
+                                    <button id="bt_edit" type="button" class="btn btn-success duration-test hide">
+                                        <span class="fa fa-pencil-square-o"></span> Sauvegarder
+                                    </button>
+                                    <button id="bt_cancel" type="button" class="btn btn-success hide">
+                                        <span class="fa fa-times"></span> Annuler
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Saisie du texte -->
+                        <div class="panel-body nopadding">
+                            <textarea id="subtitle-area" class="form-control" rows="2"
+                                      placeholder="Saisir le sous-titre ..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div id="aide_7" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="glyphicon glyphicon-indent-left"></i> Liste des Sous-Titres <span
+                            id="badge-subtitle" class="badge pull-right">0</span></h3>
+                </div>
+                <!-- Affichage de la liste des sous-titres -->
+                <div id="subtitle-list-div" class="panel-body nopadding">
+                    <ul id="subtitle-list" class="list-group" style="overflow: auto;">
+                        <div class="well"><p>Liste des sous-titres saisis</p></div>
+
+                    </ul>
+                </div>
+                <div id="subtitle-panel-footer" class="panel-footer">
+                    <div class="btn-toolbar" role="toolbar" aria-label="...">
+                        <div id="aide_8" class="btn-group" role="group" aria-label="...">
+                            <button id="bt_download" type="button" class="btn btn-primary"><span
+                                    class="glyphicon glyphicon-download-alt"></span> Télécharger le fichier .srt
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div hidden id="err_temps" class="alert alert-danger" role="alert">
+                <i class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></i> Période temporelle en conflit
+                avec un autre sub
+            </div>
+            <div hidden id="err_texte" class="alert alert-danger" role="alert">
+                <i class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></i> Saisir du texte !
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                               aria-controls="collapseOne">
+                                Cliquez ici pour afficher la liste des raccourcis
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body nopadding">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Bouton</th>
+                                    <th>Clavier</th>
+                                    <th>Souris</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Play/Pause</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary"><span
+                                                class="glyphicon glyphicon-play"></span></button>
+                                        <button type="button" class="btn btn-info"><span
+                                                class="glyphicon glyphicon-pause"></span></button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-default"><b><</b></button>
+                                    </td>
+                                    <td>Cliquer sur la vidéo</td>
+                                </tr>
+                                <tr>
+                                    <td>Synchronisation</td>
+                                    <td>
+                                        <button type="button" class="btn btn-warning"><span class="fa fa-circle"></span>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-default"><b>s</b></button>
+                                    </td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Positionner Début/Fin</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default"><span
+                                                class="glyphicon glyphicon-arrow-up"></span></button>
+                                        /
+                                        <button type="button" class="btn btn-default"><span
+                                                class="glyphicon glyphicon-arrow-down"></span></button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-default"><b>d</b></button>
+                                        /
+                                        <button type="button" class="btn btn-default"><b>f</b></button>
+                                    </td>
+                                    <td>Scroller dans les Champs "D" et "F"</td>
+                                </tr>
+                                <tr>
+                                    <td>Reculer / Avancer</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default"><span
+                                                class="glyphicon glyphicon-backward"></span></button>
+                                        /
+                                        <button type="button" class="btn btn-default"><span
+                                                class="glyphicon glyphicon-forward"></span></button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-default"><b>r</b></button>
+                                        /
+                                        <button type="button" class="btn btn-default"><b>a</b></button>
+                                    </td>
+                                    <td>Scroller dans la vidéo</td>
+                                </tr>
+                                <tr>
+                                    <td>Passer au mode écriture</td>
+                                    <td>Finir une synchronisation</td>
+                                    <td>
+                                        <button type="button" class="btn btn-default"><b>e</b></button>
+                                    </td>
+                                    <td>Cliquer dans le champ de texte "saisir le sous-titre ..."</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <JavaScript> -->
+<!-- Jquery -->
+<script src="lib/jquery-2.1.1/jquery-2.1.1.min.js"></script>
+<!-- Bootstrap core JS -->
+<script src="lib/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+<!-- hopscotch (help guide) -->
+<script src="lib/hopscotch-0.2.2/js/hopscotch.min.js"></script>
+<!-- JS Main -->
+<script src="js/functions.js"></script>
+<script src="js/time.js"></script>
+<script src="js/fullscreen.js"></script>
+<script src="js/subs.js"></script>
+<script src="js/main.js"></script>
+<script src="js/import.js"></script>
+<script src="js/controls.js"></script>
+<script src="js/keydown.js"></script>
+<script src="js/aide.js"></script>
+<script src="js/imageshandler.js"></script>
+
+<script>
+    $(document).ready(function () {
+        onReady_fullscreen();
+        onReady_controls();
+        onReady_aide();
+    });
+
+</script>
+<div id="imgContainer"> </div>
+<iframe id="frameForDl" style="display:none"></iframe>
+</body>
+</html>
