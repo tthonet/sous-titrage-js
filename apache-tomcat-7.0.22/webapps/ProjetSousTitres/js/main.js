@@ -164,7 +164,7 @@ function select_start_time(event) {
     animate('#Recording-StartTime', 'animated pulse');
 }
 
-// Enregistre la date courante de la vidéo comme date de début
+// Enregistre la date courante de la vidéo comme date d'arret
 function select_stop_time(event) {
     // Memorize stop time
     load_stop_time(video.currentTime);
@@ -176,7 +176,7 @@ function select_stop_time(event) {
 // Scroll dans le champ StartTime
 function ScrollStartTime(event) {
     // Positionne la vidéo à la nouvelle date
-    video.currentTime = StartTime + event.originalEvent.detail / 3;
+    video.currentTime = StartTime - event.originalEvent.detail / 3;
 
     // Enregistre la valeur comme StartTime
     select_start_time(event);
@@ -185,7 +185,7 @@ function ScrollStartTime(event) {
 // Scroll dans le champ StopTime
 function ScrollStopTime(event) {
     // Positionne la vidéo à la nouvelle date
-    video.currentTime = StopTime + event.originalEvent.detail / 3;
+    video.currentTime = StopTime - event.originalEvent.detail / 3;
 
     // Enregistre la valeur comme StopTime
     select_stop_time(event);
@@ -347,7 +347,7 @@ function sync_subtitle(event) {
 
 //Se déplacer dans la vidéo au scroll
 function scroll_video(event) {
-    video.currentTime = video.currentTime + event.originalEvent.detail;
+    video.currentTime = video.currentTime - event.originalEvent.detail;
 }
 
 // Recule de 5 secondes
