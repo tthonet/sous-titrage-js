@@ -14,11 +14,11 @@ function addZero(x, n) {
 
 //Converti une durée SS.sss en HH:MM:SS,sss
 function secondesToHMS(time) {
-    var d = new Date(time * 1000 + offset_millisecondes);
-    var h = addZero(d.getHours(), 2);
-    var m = addZero(d.getMinutes(), 2);
-    var s = addZero(d.getSeconds(), 2);
-    var ms = addZero(d.getMilliseconds(), 3);
+	var time_s = Math.floor(time) >> 0; // time_s contient les secondes de time
+	var h = addZero(Math.floor(time_s % 356400 / 3600), 2); // Affiche les heures modulo 100
+	var m = addZero(Math.floor(time_s % 3600 / 60), 2);
+	var s = addZero(Math.floor(time_s % 60), 2); 
+	var ms = addZero(Math.round(1000 * (time - Math.floor(time))), 3);
     return (h + ":" + m + ":" + s + "," + ms);
 }
 
@@ -53,13 +53,13 @@ function isHMSinTime(hms) {
 
     // Vérification qu'on a bien le nombre de caractères attendu après le split
     if (time [0].length != 2 || time [1].length != 2 || sms [0].length != 2 || sms [1].length != 3) {
-        return false
+        return false;
     }
 
     // Vérification qu'on a bien que des chiffres
     var patt = new RegExp("\\D");
     if (patt.test(time [0]) || patt.test(time [1]) || patt.test(sms [0]) || patt.test(sms [1])) {
-        return false
+        return false;
     }
 
     // Récupération des durées bornées
@@ -74,7 +74,7 @@ function isHMSinTime(hms) {
 
     // Si la valeur est supérieure à la durée de la vidéo => false
     if (HMSTosecondes(hms) > video.duration) {
-        return false
+        return false;
     }
 
     return true;
