@@ -109,7 +109,10 @@ function doLoad() {
 
     //
     video_name = "vid01.webm";
-
+	
+	// Met le curseur au début de la vidéo
+	seekbar = document.getElementById("seek-bar");
+	seekbar.value = 0;
 }
 
 // Remet à 0 les valeurs de StartTime et StopTime
