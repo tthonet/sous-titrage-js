@@ -288,6 +288,6 @@ function updateList() {
     var sublist = document.getElementsByClassName("list-group")[0];
     sublist.innerHTML = "";
     for (index = 0; index < subs.length; index++) {
-        sublist.innerHTML += '<li id="list_' + index + '" class="list-group-item" onclick="edit_sub(' + index + ')" >' + index + ' | ' + secondesToHMS(subs[index].stime) + ' | ' + secondesToHMS(subs[index].etime) + ' | ' + escapeHTMLEncode(subs[index].dialog) + ' <button type="button" class="btn btn-xs btn-danger pull-right" onclick="del_sub(event, ' + index + ')"><span class="glyphicon glyphicon-trash"></span></button></li>';
+        sublist.innerHTML += '<li id="list_' + index + '" class="list-group-item" onclick="edit_sub(' + index + ')" >' + (index + 1) + ' | ' + secondesToHMS(subs[index].stime) + ' | ' + secondesToHMS(subs[index].etime) + ' | ' + escapeHTMLEncode(subs[index].dialog) + ' <button type="button" class="btn btn-xs btn-danger pull-right" onclick="del_sub(event, ' + index + ')"><span class="glyphicon glyphicon-trash"></span></button></li>';
     }
 }
