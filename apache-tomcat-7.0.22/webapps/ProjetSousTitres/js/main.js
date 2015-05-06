@@ -94,6 +94,9 @@ function doLoad() {
         this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
         e.preventDefault();
     });
+	
+	// Effacer le sous-titre précédent au démarrage
+	document.getElementById("subtitle-area").value = "";
 
     // Let's put an event on video.loadedmetadata to read height & width
     video.addEventListener("loadedmetadata", setCanva, false);
