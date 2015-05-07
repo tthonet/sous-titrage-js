@@ -24,6 +24,9 @@ function keyDownSwitch(event) {
                 }
                 break;
             case 83: //s Sync
+				// Empêche l'écriture du "s" dans le champ de sous-titre
+				event.preventDefault();
+				
                 sync_subtitle();
                 break;
             case 60: //< PlayPause
@@ -38,6 +41,9 @@ function keyDownSwitch(event) {
             case 69: //e Ecrire
                 // Passage au mode saisie
                 if (!onSync) {
+					// Empêche l'écriture du "e" dans le champ de sous-titre
+					event.preventDefault();
+					
                     $('#subtitle-area').focus();
                 }
                 break;
