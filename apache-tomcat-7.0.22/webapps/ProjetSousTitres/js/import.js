@@ -21,7 +21,15 @@ function handleFiles(files) {
     } else {
         //TODO Modifier pour créer l'attribut vidéo avec src et tout
         video.src = window.URL.createObjectURL(files[0]);
-		  loadJSONImages(files[0].name);
+		
+		// Enlève l'extension au nom de la vidéo
+		clean_name = files[0].name.substr(0, files[0].name.lastIndexOf('.'));
+		
+		loadJSONImages(clean_name);
+		 
+		// Définit le nom de la vidéo sans l'extension 
+		video_name = clean_name;
+		  
         $("#import-div").fadeOut();
         $("#interface-div").fadeIn();
         video_imported = true;

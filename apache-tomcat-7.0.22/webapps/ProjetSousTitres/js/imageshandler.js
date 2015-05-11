@@ -1,12 +1,10 @@
 var imgInfo;
 
 function loadJSONImages(name) {
-
-	var auxName = name.split(".");
 	
 	// Load JSON file
 	var xhr_object=new XMLHttpRequest();
-	xhr_object.open("GET","JSON/" + auxName[0] + "_images.json",true);
+	xhr_object.open("GET","JSON/" + name + "_images.json",true);
 				
 	
 	xhr_object.onreadystatechange  = function() { 
