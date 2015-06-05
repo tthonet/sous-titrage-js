@@ -101,7 +101,7 @@ function edit_sub(id_to_edit) {
     // Clear existing subs
     context.clearRect(0, 0, $('#video-div').width(), $('#video-div').height());
 
-    repeat_video();
+    //repeat_video();
 
 
     // Let recompute calculation of duration of video-subation.
@@ -143,7 +143,10 @@ function save_edited_sub() {
         if (auth_sub) {
             // Add it to the sub list, position doesn't matter
             subs[edited_sub] = {"stime": stime, "etime": etime, "dialog": dialog};
-
+			
+			// Un-Highlight the edited subtitle
+			highlighted_sub.className = "list-group-item";
+			
             // Update the subs list
             updateList();
             //TODO marche pas pour le premier
@@ -189,11 +192,18 @@ function save_edited_sub() {
 }
 
 function cancel_edit(event) {
+	// Get the right start time, end time
+    var stime = StartTime;
+    var etime = StopTime;
+	
     bt_save.className = "btn btn-success duration-test";
     bt_edit.className = "btn btn-success duration-test hide";
     bt_edit.removeEventListener("click", save_edited_sub, false);
     bt_cancel.className = "btn btn-success hide";
     bt_cancel.removeEventListener("click", cancel_edit, false);
+	
+	// Un-Highlight the edited subtitle
+	highlighted_sub.className = "list-group-item";
 
     // Let's clean the fields :
     // SI POSSIBLE, PAS RESET, MAIS JUSTE REPARTIR SUR LES VALEURS DU SOUS TITRE EN COURS (évite de repartir à 0 alors que t'étais à 1Hxx par exemple)
