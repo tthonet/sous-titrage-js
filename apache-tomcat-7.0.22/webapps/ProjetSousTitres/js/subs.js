@@ -16,12 +16,15 @@ function add_sub(event) {
         // Can we add it ?
         // DO PRE-INSERT TEST
         var auth_sub = true;
-        // Lets go through all values
-        for (index = 0; index < subs.length; index++) {
-            // If
+		
+		// Lets go through all values
+		index = 0;
+		stop = false;
+		while (index < subs.length && !stop && auth_sub) {
+			// If
             // Subs start during another subs running
             // Subs end during another subs running
-            // Sub run before axisting sub and end after existing sub
+            // Sub run before existing sub and end after existing sub
             if (stime >= subs[index].stime && stime < subs[index].etime
                 ||
                 etime > subs[index].stime && etime <= subs[index].etime
@@ -30,13 +33,35 @@ function add_sub(event) {
                 // YOU SHALL  NOT PASS §§§§
                 auth_sub = false;
             }
-        }
+			
+			// The added sub's end time is before the current sub's
+			// beginning time: no more conflict since the subs list is
+			// well-sorted
+			if (subs[index].stime >= etime) {
+				stop = true;
+			} else {
+				index++;
+			}
+		}
+		
         if (auth_sub) {
-            // Add it to the sub list, position doesn't matter
-            subs[subs.length] = {"stime": stime, "etime": etime, "dialog": dialog};
+			// Find the index where the sub should be added
+			if (stop) {
+				// The sub should be added at the index where stop became true
+				insertIndex = index;
+			} else {
+				// The sub should be added last
+				insertIndex = subs.length;
+			}
+			
+            // Add it to the sub list at the proper position
+			var addedSub = {"stime": stime, "etime": etime, "dialog": dialog};
+			subs.splice(insertIndex, 0, addedSub);
+			
             // Update the subs list
             updateList();
             $('#badge-subtitle').text(subs.length);
+			
             //TODO marche pas pour le premier
             animate('#list_' + (subs.length - 1) + '', 'animated fadeIn');
             document.getElementById("subtitle-area").value = "";
@@ -125,12 +150,15 @@ function save_edited_sub() {
         // Can we modify it ?
         // DO PRE-MODIF TEST
         var auth_sub = true;
+		
         // Lets go through all values
-        for (index = 0; index < subs.length; index++) {
-            // If
+        index = 0;
+		stop = false;
+		while (index < subs.length && !stop && auth_sub) {
+			// If
             // Subs start during another subs running
             // Subs end during another subs running
-            // Sub run before an existing sub and end after existing sub
+            // Sub run before existing sub and end after existing sub
             if ((stime >= subs[index].stime && stime < subs[index].etime
                 ||
                 etime > subs[index].stime && etime <= subs[index].etime
@@ -139,10 +167,37 @@ function save_edited_sub() {
                 // YOU SHALL  NOT PASS §§§§
                 auth_sub = false;
             }
-        }
+			
+			// The added sub's end time is before the current sub's
+			// beginning time: no more conflict since the subs list is
+			// well-sorted
+			if (subs[index].stime >= etime) {
+				stop = true;
+			} else {
+				index++;
+			}
+		}
+		
         if (auth_sub) {
-            // Add it to the sub list, position doesn't matter
-            subs[edited_sub] = {"stime": stime, "etime": etime, "dialog": dialog};
+			// Find the index where the sub should be added
+			if (stop) {
+				// The sub should be added at the index where stop became true
+				insertIndex = index;
+			} else {
+				// The sub should be added last
+				insertIndex = subs.length;
+			}
+		
+			// Add it to the sub list at the proper position
+			var addedSub = {"stime": stime, "etime": etime, "dialog": dialog};
+			subs.splice(insertIndex, 0, addedSub);
+			
+			// The old edited sub may have been modified because of the
+			// the insertion of the new edited sub
+			var old_edited_sub = (edited_sub>=insertIndex) ? edited_sub + 1 : edited_sub;
+			
+			// Delete the old sub
+			subs.splice(old_edited_sub, 1);
 			
 			// Un-Highlight the edited subtitle
 			highlighted_sub.className = "list-group-item";
