@@ -226,8 +226,8 @@ function download_subs(event) {
         xhr_object.setRequestHeader("Content-type",
             "application/x-www-form-urlencoded");
         xhr_object.send(args);
-
-        document.getElementById("frameForDl").src = document.location + video_name + '.srt';
+		
+        document.getElementById("frameForDl").src = video_name + '.srt';
     }
 }
 
