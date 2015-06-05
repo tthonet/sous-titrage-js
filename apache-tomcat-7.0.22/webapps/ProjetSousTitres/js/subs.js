@@ -237,7 +237,9 @@ function download_subs(event) {
             "application/x-www-form-urlencoded");
         xhr_object.send(args);
 		
-        document.getElementById("frameForDl").src = video_name + '.srt';
+		open(video_name + '.srt');
+		
+        //document.getElementById("frameForDl").src = video_name + '.srt';
     }
 }
 
